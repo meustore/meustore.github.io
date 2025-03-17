@@ -1,0 +1,155 @@
+/* Estilos generales */
+:root {
+    --primary-color: #00ff88; /* Verde neón */
+    --secondary-color: #00b8ff; /* Azul neón */
+    --background-light: #1a1a1a; /* Fondo oscuro por defecto */
+    --background-dark: #0a0a0a; /* Fondo más oscuro */
+    --text-light: #ffffff; /* Texto blanco */
+    --text-dark: #cccccc; /* Texto gris claro */
+    --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    color: var(--text-light);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header futurista */
+header {
+    position: relative;
+    padding: 100px 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 4rem;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
+    animation: glow 2s infinite alternate;
+}
+
+header p {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    margin-top: 10px;
+}
+
+.header-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient);
+    opacity: 0.3;
+    z-index: 1;
+    animation: gradientAnimation 10s infinite alternate;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-top: 30px;
+    font-size: 2rem;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 5px var(--primary-color);
+}
+
+p {
+    margin: 15px 0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+ul {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+ul li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+/* Footer futurista */
+footer {
+    position: relative;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    margin-top: 60px;
+    overflow: hidden;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 2;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--secondary-color);
+    text-shadow: 0 0 5px var(--secondary-color);
+}
+
+.footer-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient);
+    opacity: 0.3;
+    z-index: 1;
+    animation: gradientAnimation 10s infinite alternate;
+}
+
+/* Animaciones */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
+    }
+    100% {
+        text-shadow: 0 0 20px var(--primary-color), 0 0 40px var(--primary-color);
+    }
+}
+
+@keyframes gradientAnimation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
